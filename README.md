@@ -16,10 +16,10 @@ Aplicación de una técnica de explicación llamada Grad-CAM para resaltar con u
 A continuación le explicaremos cómo empezar a utilizarla.
 
 Construya la imagen a partir del archivo Dockerfile
-- docker build -t "neumonia_detector:dockerfile" .
+- docker build -t neumonia_detector:latest .
 
 Corra en un contenedor la imagen construida.
-- docker run -it –rm -e DISPLAY=host.docker.internal:0.0 DISPLAY=$DISPLAY neumonia_detector:dockerfile
+- docker run -it –-rm -e DISPLAY=host.docker.internal:0 --net host neumonia_detector
 
 ## Prueba unitarias de Testing.
 
